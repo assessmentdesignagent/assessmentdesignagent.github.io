@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Roboto+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;700&family=Roboto+Mono:wght@400;500&display=swap');
 
 *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
 
@@ -11,7 +11,6 @@
   --shadow-md:0 2px 8px rgba(0,0,0,0.08);
   --code-bg:#2C2C2C; --code-text:#E8E0D4;
   --highlight:#C9543A;
-  /* Phase colours from the framework */
   --phase-purple:#6B3FA0;
   --phase-teal:#1A8A7D;
   --phase-amber:#D4960A;
@@ -21,7 +20,7 @@
 html { scroll-behavior:smooth; }
 
 body {
-  font-family:'Roboto',sans-serif; font-weight:400; color:var(--text);
+  font-family:'DM Sans',sans-serif; font-weight:400; color:var(--text);
   background:var(--bg); line-height:1.7; min-height:100vh;
   display:flex; flex-direction:column;
 }
@@ -56,17 +55,16 @@ body {
   text-align:center; padding:6rem 2rem 4rem; min-height:calc(100vh - 64px - 60px);
 }
 .hero-label { font-size:0.8rem; font-weight:500; letter-spacing:0.25em; text-transform:uppercase; color:var(--text-muted); margin-bottom:1.5rem; }
-.hero h1 { font-size:clamp(2rem,5vw,3.4rem); font-weight:700; line-height:1.2; max-width:720px; margin-bottom:1.5rem; }
-.hero h1 span { display:block; font-weight:300; font-size:0.55em; letter-spacing:0.02em; color:var(--text-muted); margin-top:0.6rem; }
+.hero h1 { font-size:clamp(2.2rem,5vw,3.6rem); font-weight:700; line-height:1.15; max-width:720px; margin-bottom:1.5rem; }
+.hero h1 span { display:block; font-weight:300; font-size:0.5em; letter-spacing:0.02em; color:var(--text-muted); margin-top:0.6rem; }
 .hero-divider { width:48px; height:2px; background:var(--border); margin:1rem auto 1.5rem; }
 .hero-subtitle { font-size:1.05rem; font-weight:300; color:var(--text-muted); max-width:600px; line-height:1.8; }
 .hero-context { margin-top:2rem; font-size:0.85rem; color:var(--text-muted); font-weight:400; }
-.hero-context a { color:var(--highlight); text-decoration:underline; text-underline-offset:2px; }
 
 /* ── Content ── */
 .content { max-width:820px; margin:0 auto; padding:3.5rem 2rem 6rem; flex:1; }
-.content h1 { font-size:2rem; font-weight:700; margin-bottom:0.4rem; }
-.content .subtitle { font-size:1rem; color:var(--text-muted); font-weight:300; margin-bottom:2.5rem; padding-bottom:1.5rem; border-bottom:1px solid var(--border); }
+.content h1 { font-size:2rem; font-weight:700; margin-bottom:0.4rem; text-align:center; }
+.content .subtitle { font-size:1rem; color:var(--text-muted); font-weight:300; margin-bottom:2.5rem; padding-bottom:1.5rem; border-bottom:1px solid var(--border); text-align:center; }
 .content h2 { font-size:1.35rem; font-weight:700; margin-top:2.5rem; margin-bottom:0.75rem; }
 .content h3 { font-size:1.1rem; font-weight:500; margin-top:2rem; margin-bottom:0.5rem; }
 .content p { color:var(--text); font-weight:300; line-height:1.85; margin-bottom:1rem; }
@@ -74,21 +72,31 @@ body {
 .content a { color:var(--highlight); text-decoration:underline; text-underline-offset:2px; }
 
 /* ── Divider ── */
-.section-divider { width:48px; height:2px; background:var(--border); margin:2.5rem 0; }
+.section-divider { width:48px; height:2px; background:var(--border); margin:2.5rem auto; }
 
 /* ── Cards ── */
 .card-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:1.25rem; margin:1.5rem 0; }
-.card { background:var(--bg-card); border:1px solid var(--border); border-radius:6px; padding:1.5rem; box-shadow:var(--shadow); }
-.card h3 { font-size:1rem; font-weight:700; margin:0 0 0.25rem; }
-.card .role { font-size:0.82rem; color:var(--text-muted); font-weight:400; margin-bottom:0; }
+.card {
+  background:var(--bg-card); border:1px solid var(--border); border-radius:6px;
+  padding:1.75rem 1.5rem; box-shadow:var(--shadow); text-align:center;
+}
+.card h3 { font-size:1.05rem; font-weight:700; margin:0 0 0.6rem; }
+.card .role { font-size:0.82rem; color:var(--text-muted); font-weight:400; margin-bottom:0.15rem; line-height:1.5; }
+.card .role-label {
+  display:inline-block; font-size:0.72rem; font-weight:500; letter-spacing:0.06em;
+  text-transform:uppercase; color:var(--phase-purple); margin-top:0.5rem;
+}
 
 /* ── Numbered items ── */
-.numbered-item { display:flex; gap:1.25rem; margin-bottom:1.75rem; }
-.numbered-item .num { flex-shrink:0; width:36px; height:36px; display:flex; align-items:center; justify-content:center; background:var(--accent); color:var(--white); font-weight:700; font-size:0.85rem; border-radius:50%; margin-top:0.1rem; }
+.numbered-item { display:flex; gap:1.25rem; margin-bottom:1.75rem; align-items:flex-start; }
+.numbered-item .num {
+  flex-shrink:0; width:36px; height:36px; display:flex; align-items:center;
+  justify-content:center; background:var(--accent); color:var(--white);
+  font-weight:700; font-size:0.85rem; border-radius:50%; margin-top:0.15rem;
+}
 .numbered-item .text h3 { margin:0 0 0.25rem; font-size:1rem; }
 .numbered-item .text p { margin:0; font-size:0.92rem; }
 
-/* Phase-coloured numbered items */
 .numbered-item.phase-purple .num { background:var(--phase-purple); }
 .numbered-item.phase-teal .num { background:var(--phase-teal); }
 .numbered-item.phase-amber .num { background:var(--phase-amber); }
@@ -112,13 +120,20 @@ blockquote cite { display:block; font-style:normal; font-size:0.85rem; margin-to
 .info-box h3 { margin:0 0 0.35rem; font-size:1rem; }
 .info-box p { margin:0; font-size:0.92rem; }
 
-/* Phase-coloured info boxes */
 .info-box.phase-purple { border-left:4px solid var(--phase-purple); }
 .info-box.phase-teal { border-left:4px solid var(--phase-teal); }
 .info-box.phase-amber { border-left:4px solid var(--phase-amber); }
 .info-box.phase-blue { border-left:4px solid var(--phase-blue); }
 
-/* ── Prompt section blocks (for instructions page) ── */
+/* ── Knowledge base list ── */
+.kb-list { list-style:none; margin:0; padding:0; }
+.kb-list li {
+  padding:0.6rem 0; font-size:0.92rem; font-weight:300;
+  border-bottom:1px solid var(--border); color:var(--text);
+}
+.kb-list li:last-child { border-bottom:none; }
+
+/* ── Prompt section blocks ── */
 .prompt-section { margin:2rem 0; }
 .prompt-section-header {
   display:flex; align-items:center; gap:0.75rem;

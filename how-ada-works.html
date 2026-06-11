@@ -111,40 +111,49 @@
 
       <div class="section-divider"></div>
 
-      <h2>Evaluation: A Four-Tier Approach</h2>
+      <h2>Evaluation: A Two-Layer Comparative Analysis</h2>
       <p>
-        Evaluating ADA serves two purposes: quality enhancement (continuously improving ADA) and quality assurance (ensuring a threshold of quality before sharing with the community). The project proposes four tiers.
+        To evaluate ADA, the project compares two configurations across five assessment design scenarios (64 conversational turns). ADA A operates with the Collaborative Assessment Design Decision Making Framework as part of its knowledge base. ADA B operates without it. This paired design allows the team to isolate the effect of the structured flowchart on ADA's facilitation behaviour.
       </p>
 
-      <div class="info-box phase-purple">
-        <h3>Tier 1. Edge Cases and Safety Testing</h3>
-        <p>Testing edge cases and unethical requests to create a safety floor. This includes requests susceptible to bias and deliberately unethical requests to verify ADA responds appropriately. Estimated workload is 1 to 3 hours.</p>
-      </div>
+      <p>The analysis pipeline has two layers.</p>
 
-      <div class="info-box phase-teal">
-        <h3>Tier 2. Text Similarity Comparison</h3>
-        <p>Establishing a comparative baseline using cosine similarity between ADA outputs on Claude and Copilot. Preliminary results showed an average cosine similarity of 0.828 per question turn, with lower similarity on concrete outputs (marking criteria) and higher similarity on brainstorming. Replication code is available.</p>
-      </div>
+      <h3>Layer 1. Surface-level comparison</h3>
+      <p>
+        This layer establishes a divergence baseline by measuring the overall similarity between ADA A and ADA B responses. Three metrics are used. <strong>Cosine similarity</strong> (Sentence-BERT, all-MiniLM-L6-v2) measures how semantically similar the full responses are at each turn. <strong>BERTScore</strong> (roberta-large) provides precision, recall, and F1 at the turn level. <strong>Hedge density</strong>, measured through six regex-based categories, captures the level of hedging language in each response.
+      </p>
+
+      <h3>Layer 2. Sentence-level analysis</h3>
+      <p>
+        This layer examines the content and structure of ADA's facilitation in finer detail. It has two components.
+      </p>
 
       <div class="info-box phase-amber">
-        <h3>Tier 3. Content Analysis</h3>
-        <p>Evaluating whether human agency is secured within the human-ADA interaction. Uses Baron's (2023) search-inference framework and a custom coding scheme to analyse both ADA's inputs (offering possibilities, prompting evidence-searching, seeking verification) and human inputs (giving context, making decisions, setting goals). Estimated workload is 1 to 2 days.</p>
+        <h3>2a. Decision space classification</h3>
+        <p>Using directed content analysis (Hsieh &amp; Shannon, 2005), each sentence is classified into one of four decision spaces drawn from the Collaborative Assessment Design Decision Making Framework: Foundation and Purposes, Design and Alignment, Validating for VFI, and Design and Build. This reveals how each ADA configuration distributes its attention across the phases of assessment design, and how many transitions between phases occur per scenario.</p>
       </div>
 
       <div class="info-box phase-blue">
-        <h3>Tier 4. Persona-Based Evaluation</h3>
-        <p>Capturing lived user feedback through surveys and interviews, plus fictional persona testing to evaluate how ADA responds to different user types, needs, and communication styles.</p>
+        <h3>2b. Dialogue act classification</h3>
+        <p>Drawing on Stolcke et al. (2000), each sentence is classified into one of nine facilitation acts: SCAFFOLD, VALIDATE, SUMMARISE, RECOMMEND, PROBE, REFRAME, INFORM, DIRECT, and ELABORATE. Classification uses priority-ordered regex pattern matching in a first pass, followed by a carry-forward pass where ELABORATE sentences inherit the preceding act when appropriate. This reveals the facilitation profile of each ADA configuration and where they differ most.</p>
       </div>
+
+      <div class="section-divider"></div>
+
+      <h2>Safeguarding: Edge Case Testing</h2>
+      <p>
+        Alongside the comparative analysis, the team tests ADA's responses to edge cases and unethical requests. This includes prompts susceptible to generating biased content and deliberately biased requests to verify that ADA responds appropriately and maintains its ethical guardrails.</p>
 
       <div class="section-divider"></div>
 
       <h2>Key References</h2>
       <p>Bearman, M., Dawson, P., Boud, D., Bennett, S., Hall, M. &amp; Molloy, E. (2016). Support for assessment practice: developing the Assessment Design Decisions Framework. <em>Teaching in Higher Education</em>, 21(5), 545–556.</p>
-      <p>Baron, J. (2023). What is thinking? In <em>Thinking and Deciding</em> (pp. 5–32). Cambridge University Press.</p>
-      <p>Sandoval, W. (2014). Conjecture mapping: An approach to systematic educational design research. <em>Journal of the Learning Sciences</em>, 23(1), 18–36.</p>
       <p>Dakan, R. &amp; Feller, J. (2025). Framework for AI Fluency. Version 1.1. Ringling College of Art and Design.</p>
+      <p>Hsieh, H.-F. &amp; Shannon, S. E. (2005). Three approaches to qualitative content analysis. <em>Qualitative Health Research</em>, 15(9), 1277–1288.</p>
       <p>Huff, K., Steinberg, L., &amp; Matts, T. (2010). The Promises and Challenges of Implementing Evidence-Centered Design in Large-Scale Assessment. <em>Applied Measurement in Education</em>, 23(4), 310–324.</p>
       <p>Quilter, S. M., &amp; Gallini, J. K. (2000). Teachers' Assessment Literacy and Attitudes. <em>The Teacher Educator</em>, 36(2), 115–131.</p>
+      <p>Sandoval, W. (2014). Conjecture mapping: An approach to systematic educational design research. <em>Journal of the Learning Sciences</em>, 23(1), 18–36.</p>
+      <p>Stolcke, A. et al. (2000). Dialogue act modelling for automatic tagging and recognition of conversational speech. <em>Computational Linguistics</em>, 26(3), 339–373.</p>
       <p>Deeley, S. J., &amp; Bovill, C. (2015). Staff student partnership in assessment. <em>Assessment &amp; Evaluation in Higher Education</em>, 42(3), 463–477.</p>
 
     </div>
