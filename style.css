@@ -75,10 +75,11 @@ body {
 .section-divider { width:48px; height:2px; background:var(--border); margin:2.5rem auto; }
 
 /* ── Cards ── */
-.card-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:1.25rem; margin:1.5rem 0; }
+.card-grid { display:flex; flex-wrap:wrap; justify-content:center; gap:1.25rem; margin:1.5rem 0; }
 .card {
   background:var(--bg-card); border:1px solid var(--border); border-radius:6px;
   padding:1.75rem 1.5rem; box-shadow:var(--shadow); text-align:center;
+  width:calc(33.333% - 1rem); min-height:180px; display:flex; flex-direction:column; align-items:center; justify-content:center;
 }
 .card h3 { font-size:1.05rem; font-weight:700; margin:0 0 0.6rem; }
 .card .role { font-size:0.82rem; color:var(--text-muted); font-weight:400; margin-bottom:0.15rem; line-height:1.5; }
@@ -170,5 +171,6 @@ blockquote cite { display:block; font-style:normal; font-size:0.85rem; margin-to
   .navbar-links.open { display:flex; }
   .navbar-links a { width:100%; }
   .hero { padding:4rem 1.5rem 3rem; }
-  .card-grid { grid-template-columns:1fr; }
+  .card-grid { flex-direction:column; align-items:center; }
+  .card { width:100%; }
 }
