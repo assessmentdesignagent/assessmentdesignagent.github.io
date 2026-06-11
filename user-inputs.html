@@ -14,6 +14,7 @@
     <ul class="navbar-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="instructions.html">Instructions</a></li>
+      <li><a href="how-ada-works.html">How ADA Works</a></li>
       <li><a href="user-inputs.html" class="active">User Inputs</a></li>
       <li><a href="case-studies.html">Case Studies</a></li>
       <li><a href="people.html">People</a></li>
@@ -23,11 +24,132 @@
   <main class="page">
     <div class="content">
       <h1>User Inputs</h1>
-      <p class="subtitle">Configure your assessment parameters</p>
+      <p class="subtitle">What to prepare before using ADA, and how to prompt effectively</p>
+
+      <h2>Before You Start</h2>
+      <p>
+        ADA works best when users come prepared with context about their course and assessment challenges. You do not need a finished plan. Even a one-line description of what you want to achieve is a good starting point. The more context you provide, the more targeted ADA's facilitation will be.
+      </p>
+      <p>
+        Here is what to think about before your session.
+      </p>
+
+      <div class="numbered-item">
+        <div class="num">1</div>
+        <div class="text">
+          <h3>Know your course context</h3>
+          <p>What level is the course (UG, PG)? What discipline? How many students? What are the intended learning outcomes? What assessment methods are currently used?</p>
+        </div>
+      </div>
+
+      <div class="numbered-item">
+        <div class="num">2</div>
+        <div class="text">
+          <h3>Identify your assessment challenge</h3>
+          <p>What is the specific problem or opportunity? Are you redesigning an existing assessment, creating something new, or responding to a specific concern such as GenAI use, group work, or marking criteria clarity?</p>
+        </div>
+      </div>
+
+      <div class="numbered-item">
+        <div class="num">3</div>
+        <div class="text">
+          <h3>Gather relevant documents</h3>
+          <p>If you have existing assessment briefs, marking criteria, syllabus documents, or feedback templates, upload them to the Claude Project. Tell ADA if you want it to refer to specific documents in its responses.</p>
+        </div>
+      </div>
+
+      <div class="numbered-item">
+        <div class="num">4</div>
+        <div class="text">
+          <h3>Decide who is in the room</h3>
+          <p>ADA is designed for collaborative use. If you are working with a student partner, an academic developer, or a co-marker, identify yourselves when you respond (for example, "Educator: ..." or "Student: ..."). ADA will adapt its facilitation accordingly.</p>
+        </div>
+      </div>
+
+      <div class="section-divider"></div>
+
+      <h2>Tips for Working with ADA</h2>
+
+      <div class="info-box">
+        <h3>Prompt intuitively</h3>
+        <p>If ADA gives you too much information, let it know. If you want it to focus on a specific area, say so. ADA is designed to follow your lead.</p>
+      </div>
+
+      <div class="info-box">
+        <h3>Be intentional, not passive</h3>
+        <p>ADA works best when you engage step by step. A one-liner asking it to do all the work will produce something generic. Provide context, respond to its questions, and push back when its suggestions don't fit your situation.</p>
+      </div>
+
+      <div class="info-box">
+        <h3>Ask for pros and cons</h3>
+        <p>At each decision point, ask ADA for arguments for and against different options. This surfaces considerations you might not have thought of and helps you make more deliberate choices.</p>
+      </div>
+
+      <div class="info-box">
+        <h3>Tell ADA when you're ready to move on</h3>
+        <p>When you've settled on a direction, tell ADA you're ready for the next step or for an implementation plan. ADA won't rush you, but it also won't move forward until you signal that you're satisfied.</p>
+      </div>
+
+      <div class="section-divider"></div>
+
+      <h2>Prompt Structures</h2>
+      <p>
+        The specific prompts will vary depending on your context and assessment challenge. Below are general structures that work well as starting points. Adapt the bracketed sections to your situation.
+      </p>
+
+      <h3>Opening prompt: setting the scene</h3>
+      <div class="prompt-block"><span class="label">Prompt template</span>I am a course leader for [course name/description] at [level].
+As part of this course, I set [assessment type] that requires
+students to [brief description of the task].
+
+My concern is [describe the specific challenge or opportunity].
+
+I attach [document name]. Review this document thoroughly,
+summarise your understanding of the project, the expectations,
+and the marking criteria.
+
+Then, using this as a starting point, give me options for
+[what you want to explore].</div>
+
+      <h3>Exploring options</h3>
+      <div class="prompt-block"><span class="label">Prompt template</span>I would go for [option]. I like the idea of [specific element].
+I also like [another element].
+
+Can you help me structure this approach?</div>
+
+      <h3>Requesting implementation details</h3>
+      <div class="prompt-block"><span class="label">Prompt template</span>Can you show me the full [marking criteria / assessment brief /
+feedback template] taking into account all of the decisions
+we've made?
+
+Also, [any additional considerations, for example "remove all
+criteria related to presentation" or "add a section on
+student choice"].</div>
+
+      <h3>Challenging ADA's suggestions</h3>
+      <div class="prompt-block"><span class="label">Prompt template</span>I am not sure I understand what [concept] means in this
+context. Can you help me understand it so I can decide
+whether to keep it or not?</div>
+
+      <h3>Requesting the decision pathway</h3>
+      <div class="prompt-block"><span class="label">Prompt template</span>Can you review our conversation and draw the decision
+pathway we went through together?</div>
+
+      <div class="section-divider"></div>
+
+      <h2>What ADA Should Not Do</h2>
+      <p>
+        Understanding ADA's boundaries is part of using it effectively. ADA is designed with explicit constraints.
+      </p>
+
+      <div class="info-box">
+        <p>ADA should not initiate assessment designs without first seeking contextual information about course requirements and stakeholder needs. It should not generate outputs like assessment briefs or marking criteria as final artefacts without prompting human review. It should not undermine the development of educator and student assessment and feedback literacy. The human is always in the driving seat.</p>
+      </div>
+
     </div>
   </main>
 
-  <footer class="footer">ADA Project &copy; 2026</footer>
+  <footer class="footer">ADA Project &copy; 2026 &middot; Eden Centre, LSE &middot; Funded by QAA Collaborative Enhancement Project</footer>
 
 </body>
 </html>
