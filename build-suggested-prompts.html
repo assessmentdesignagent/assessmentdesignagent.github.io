@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Suggested Prompts &#8211; ADA</title><link rel="stylesheet" href="style.css"></head><body><nav class="navbar"><div class="nav-left"><a href="index.html" class="navbar-logo">ADA</a><span class="nav-section-label">Build Your ADA</span></div><button class="menu-toggle" onclick="document.querySelector('.navbar-links').classList.toggle('open')" aria-label="Menu">&#9776;</button><ul class="navbar-links"><li><a href="build-setup.html">Setup</a></li><li><a href="build-user-guide.html">User Guide</a></li><li><a href="build-suggested-prompts.html"  class="active">Suggested Prompts</a></li></ul></nav><main class="page"><div class="content-wrap"><nav class="toc"><p class="toc-title">On this page</p><a href="#opening">Opening prompt</a><a href="#options">Exploring options</a><a href="#implement">Implementation details</a><a href="#challenge">Challenging suggestions</a><a href="#pathway">Decision pathway</a></nav><div class="content"><h1>Suggested Prompts</h1>
+<p class="subtitle">Templates for working with ADA, adaptable to any assessment design scenario</p>
+<p>The specific prompts will vary depending on your context and assessment challenge. Below are general structures that work well as starting points. Adapt the bracketed sections to your situation. Use the <strong>Copy</strong> button on each block to copy the template to your clipboard.</p>
+<h2 id="opening">Opening prompt: setting the scene</h2>
+<div class="prompt-block"><button class="copy-btn" onclick="copyBlock(this)">Copy</button><span class="label">Prompt template</span>I am a course leader for [course name/description] at [level].
+As part of this course, I set [assessment type] that requires
+students to [brief description of the task].
+
+My concern is [describe the specific challenge or opportunity].
+
+I attach [document name]. Review this document thoroughly,
+summarise your understanding of the project, the expectations,
+and the marking criteria.
+
+Then, using this as a starting point, give me options for
+[what you want to explore].</div>
+<h2 id="options">Exploring options</h2>
+<div class="prompt-block"><button class="copy-btn" onclick="copyBlock(this)">Copy</button><span class="label">Prompt template</span>I would go for [option]. I like the idea of [specific element].
+I also like [another element].
+
+Can you help me structure this approach?</div>
+<h2 id="implement">Requesting implementation details</h2>
+<div class="prompt-block"><button class="copy-btn" onclick="copyBlock(this)">Copy</button><span class="label">Prompt template</span>Can you show me the full [marking criteria / assessment brief /
+feedback template] taking into account all of the decisions
+we have made?
+
+Also, [any additional considerations, for example "remove all
+criteria related to presentation" or "add a section on
+student choice"].</div>
+<h2 id="challenge">Challenging ADA&#8217;s suggestions</h2>
+<div class="prompt-block"><button class="copy-btn" onclick="copyBlock(this)">Copy</button><span class="label">Prompt template</span>I am not sure I understand what [concept] means in this
+context. Can you help me understand it so I can decide
+whether to keep it or not?</div>
+<h2 id="pathway">Requesting the decision pathway</h2>
+<div class="prompt-block"><button class="copy-btn" onclick="copyBlock(this)">Copy</button><span class="label">Prompt template</span>Can you review our conversation and draw the decision
+pathway we went through together?</div></div></div></main><footer class="footer">ADA Project &copy; 2026 &middot; Eden Centre, LSE &middot; Funded by QAA Collaborative Enhancement Project</footer><script>function copyBlock(btn){var block=btn.parentElement;var text=block.textContent.replace(/^(Prompt template|Copy|Copied!)\s*/gm,'').trim();navigator.clipboard.writeText(text).then(function(){btn.textContent='Copied!';btn.classList.add('copied');setTimeout(function(){btn.textContent='Copy';btn.classList.remove('copied')},1500)});}</script></body></html>
