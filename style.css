@@ -68,7 +68,7 @@ body{font-family:'DM Sans',sans-serif;font-weight:400;color:var(--text);backgrou
 
 /* Logo bar */
 .logo-bar{display:flex;align-items:center;justify-content:center;gap:3rem;flex-wrap:wrap;padding:2rem 2rem;margin-top:2rem;border-top:1px solid var(--border)}
-.logo-bar img{height:70px;opacity:.85;border-radius:8px;transition:opacity .2s}
+.logo-bar img{height:70px;opacity:1;border-radius:8px;transition:opacity .2s}
 .logo-bar img:hover{opacity:1}
 .logo-bar a{text-decoration:none}
 
